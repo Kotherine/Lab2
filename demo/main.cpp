@@ -3,11 +3,11 @@
 int main() {
   Investigation Direction = Investigation("direction");
   Direction.direction();
-  Direction.print(cout);
+  Direction.print(std::cout);
   Investigation Reverse = Investigation("reverse");
   Reverse.reverse();
-  Reverse.print(cout);
+  Reverse.print(std::cout);
   Investigation Random = Investigation("random");
   Random.random();
-  Random.print(cout);
+  Random.print(std::cout);
 }

@@ -2,7 +2,7 @@
 
 #include "investigation.hpp"
 
-Investigation::Investigation(string travel_variant)
+Investigation::Investigation(std::string travel_variant)
     : _travel_variant(travel_variant),
       _duration()
 {
@@ -77,7 +77,7 @@ void Investigation::random(){
   }
 }
 
-void Investigation::print(ostream& os){
+void Investigation::print(std::ostream& os){
   os << "Investigation:\n";
   os << "\ttravel order: \"" << _travel_variant << "\"\n";
   os << "\texperiments: \n";
@@ -87,7 +87,7 @@ void Investigation::print(ostream& os){
     os << "\t\tinput data: \n";
     int n = _buffer_size[i] >= 1024 * 1024 ? _buffer_size[i] / 1024 / 1024
                                            : _buffer_size[i] / 1024;
-    string str = _buffer_size[i] >= 1024 * 1024 ? "Mb" : "Kb";
+    std::string str = _buffer_size[i] >= 1024 * 1024 ? "Mb" : "Kb";
     os << "\t\t\tbuffer size: \"" << n << str << "\"\n";
     double d = _duration[i] > 1000 ? _duration[i] / 1000 : _duration[i];
     str = _duration[i] > 1000 ? "s" : "ms";
