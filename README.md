@@ -132,29 +132,200 @@ cache_size['3'] = 8 mb;
 
 ### Результаты
 
-Ниже представлен формат и пример отчета:
+Мой отчет:
 
-```yaml
-investigation:                                       |  investigaion:
-  travel_variant: <вариант_прохода>                  |    travel_order: "direction"
-  experiments:                                       |    experiments:
-  - experiment:                                      |    - experiment:
-      number:                                        |        number: 1
-      input_data:                                    |        input_data:
-        buffer_size: <размер_буфера>                 |          buffer_size: "1mb"
-      results:                                       |        results:
-        duration: <продолжительность>                |          duration: "1ns"
-  - experiment:                                      |    - experiment:
-      number: <номер_эксперимента>                   |        number: 2
-      input_data:                                    |        input_data:
-        buffer_size: <размер_буфера>                 |          buffer_size: "2mb"
-      results:                                       |        results:
-        duration: <продолжительность>                |          duration: "2ns"
-                                                     |
-investigation:                                       |  investigation:
-...                                                  |  ...
 ```
+Investigation:
+  travel order: "direction"
+  experiments:
+    - experiment:
+    number: 1
+    input data:
+      buffer size: "256Kb"
+    results:
+      duration: "20.405ms"
+    - experiment:
+    number: 2
+    input data:
+      buffer size: "512Kb"
+    results:
+      duration: "44.14ms"
+    - experiment:
+    number: 3
+    input data:
+      buffer size: "1Mb"
+    results:
+      duration: "78.227ms"
+    - experiment:
+    number: 4
+    input data:
+      buffer size: "2Mb"
+    results:
+      duration: "175.336ms"
+    - experiment:
+    number: 5
+    input data:
+      buffer size: "4Mb"
+    results:
+      duration: "352.638ms"
+    - experiment:
+    number: 6
+    input data:
+      buffer size: "8Mb"
+    results:
+      duration: "631.673ms"
+    - experiment:
+    number: 7
+    input data:
+      buffer size: "16Mb"
+    results:
+      duration: "1.2403s"
+    - experiment:
+    number: 8
+    input data:
+      buffer size: "32Mb"
+    results:
+      duration: "2.6985s"
+    - experiment:
+    number: 9
+    input data:
+      buffer size: "64Mb"
+    results:
+      duration: "5.2691s"
+    - experiment:
+    number: 10
+    input data:
+      buffer size: "72Mb"
+    results:
+      duration: "5.5273s"
 
-### Рекомендации
+Investigation:
+  travel order: "reverse"
+  experiments:
+    - experiment:
+    number: 1
+    input data:
+      buffer size: "256Kb"
+    results:
+      duration: "22.001ms"
+    - experiment:
+    number: 2
+    input data:
+      buffer size: "512Kb"
+    results:
+      duration: "42.548ms"
+    - experiment:
+    number: 3
+    input data:
+      buffer size: "1Mb"
+    results:
+      duration: "86.932ms"
+    - experiment:
+    number: 4
+    input data:
+      buffer size: "2Mb"
+    results:
+      duration: "186.893ms"
+    - experiment:
+    number: 5
+    input data:
+      buffer size: "4Mb"
+    results:
+      duration: "362.797ms"
+    - experiment:
+    number: 6
+    input data:
+      buffer size: "8Mb"
+    results:
+      duration: "701.405ms"
+    - experiment:
+    number: 7
+    input data:
+      buffer size: "16Mb"
+    results:
+      duration: "1.42503s"
+    - experiment:
+    number: 8
+    input data:
+      buffer size: "32Mb"
+    results:
+      duration: "2.84126s"
+    - experiment:
+    number: 9
+    input data:
+      buffer size: "64Mb"
+    results:
+      duration: "5.49983s"
+    - experiment:
+    number: 10
+    input data:
+      buffer size: "72Mb"
+    results:
+      duration: "6.31206s"
 
-При создание неиспользуемых переменных для считывание данных из буфера можно использовать аттрибут `[[maybe_unused]]`
+Investigation:
+  travel order: "random"
+  experiments:
+    - experiment:
+    number: 1
+    input data:
+      buffer size: "256Kb"
+    results:
+      duration: "208.958ms"
+    - experiment:
+    number: 2
+    input data:
+      buffer size: "512Kb"
+    results:
+      duration: "372.331ms"
+    - experiment:
+    number: 3
+    input data:
+      buffer size: "1Mb"
+    results:
+      duration: "589.618ms"
+    - experiment:
+    number: 4
+    input data:
+      buffer size: "2Mb"
+    results:
+      duration: "1.32492s"
+    - experiment:
+    number: 5
+    input data:
+      buffer size: "4Mb"
+    results:
+      duration: "2.88458s"
+    - experiment:
+    number: 6
+    input data:
+      buffer size: "8Mb"
+    results:
+      duration: "5.3575s"
+    - experiment:
+    number: 7
+    input data:
+      buffer size: "16Mb"
+    results:
+      duration: "10.6446s"
+    - experiment:
+    number: 8
+    input data:
+      buffer size: "32Mb"
+    results:
+      duration: "22.9858s"
+    - experiment:
+    number: 9
+    input data:
+      buffer size: "64Mb"
+    results:
+      duration: "48.7426s"
+    - experiment:
+    number: 10
+    input data:
+      buffer size: "72Mb"
+    results:
+      duration: "56.5633s"
+```
+![Results](./images/result.png)
+

@@ -1,5 +1,13 @@
-#include <example.hpp>
+#include <investigation.hpp>
 
 int main() {
-  example();
+  Investigation Direction = Investigation("direction");
+  Direction.direction();
+  Direction.print(cout);
+  Investigation Reverse = Investigation("reverse");
+  Reverse.reverse();
+  Reverse.print(cout);
+  Investigation Random = Investigation("random");
+  Random.random();
+  Random.print(cout);
 }
